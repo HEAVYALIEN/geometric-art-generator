@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Nautical Flags Generator</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="250" height="250"></canvas>
+
+    <div class="form-container">
+      <form>
+        <label for="grid-size">Grid size:</label>
+        <input type="number" id="grid-size" name="grid-size" min="2" max="8" value="2">
+        <label for="cell-size">Cell size:</label>
+        <input type="number" id="cell-size" name="cell-size" min="10" max="150" value="100">
+        <label for="cell-padding">Cell padding:</label>
+        <input type="number" id="cell-padding" name="cell-padding" min="0" max="25" value="20">
+      </form>
+
+      <form>
+        <h3>Select shapes:</h3>
+        <div class="checkbox-container">
+          <div class="checkbox-item">
+            <input type="checkbox" id="rect" name="rect" value="rect" checked>
+            <label for="rect">Rectangle</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="tri" name="tri" value="tri" checked>
+            <label for="tri">Triangle</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="circle" name="circle" value="circle" checked>
+            <label for="circle">Circle</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="flag" name="flag" value="flag" checked>
+            <label for="flag">Flag</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="checkered-flag" name="checkered-flag" value="checkered-flag" checked>
+            <label for="checkered-flag">Checkered Flag</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="zulu" name="zulu" value="zulu" checked>
+            <label for="zulu">Zulu</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="tri2" name="tri2" value="tri2" checked>
+            <label for="tri2">Triangle 2</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="yankee" name="yankee" value="yankee" checked>
+            <label for="yankee">Yankee</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="golf" name="golf" value="golf" checked>
+            <label for="golf">Golf</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="circlez" name="circlez" value="circlez" checked>
+            <label for="circlez">Circles</label>
+          </div>
+        </div>
+      </form>
+
+      <div class="buttons">
+        <input type="button" value="Generate" id="change-color-btn">
+        <button onclick="saveImage()">Save Image</button>
+        <button class="animate-btn" id="animate-btn">Animate On/Off</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
